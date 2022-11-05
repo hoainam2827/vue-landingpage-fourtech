@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+.ct-main-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 3.6px;
+  color: #000000;
+}
+
+.ct-Playfair {
+  font-family: "Playfair Display";
+}
+
+@media screen and (max-width: 500px) {
+  .ct-main-title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    color: #000000;
+  }
+}
+
+.ant-dropdown-menu-title-content {
+  display: flex !important;
+  align-items: center;
+}
+
+.ant-dropdown {
+  z-index: 9999999 !important;
+}
