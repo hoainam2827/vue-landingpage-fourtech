@@ -45,7 +45,7 @@
                   >M</span
                 >
                 <span
-                  class="not-italic text-[30px] sm:smtext-[60px] leading-[100px] tracking-wider-[-1px] font-extrabold"
+                  class="not-italic text-[30px] sm:text-[60px] leading-[100px] tracking-wider-[-1px] font-extrabold"
                   style="color: rgba(7, 155, 238, 1)"
                   >+</span
                 >
