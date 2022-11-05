@@ -24,7 +24,7 @@
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
                 >
-                  Days
+                  {{ $t("hero.day") }}
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
                 >
-                  Hours
+                  {{ $t("hero.hours") }}
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
                 >
-                  Minutes
+                  {{ $t("hero.minutes") }}
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
                 >
-                  Second
+                  {{ $t("hero.second") }}
                 </div>
               </div>
             </div>
