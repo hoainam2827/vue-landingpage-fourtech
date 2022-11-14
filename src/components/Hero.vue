@@ -19,7 +19,7 @@
                 <div
                   class="not-italic font-black text-center text-black text-[36px] sm:text-[5vw] lg:text-[65px] lg:leading-[79px] leading-[64px] ct-Playfair"
                 >
-                  30
+                  {{days}}
                 </div>
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
@@ -38,7 +38,7 @@
                 <div
                   class="not-italic font-black text-center text-black text-[36px] sm:text-[5vw] lg:text-[65px] lg:leading-[79px] leading-[64px] ct-Playfair"
                 >
-                  18
+                  {{hours%24}}
                 </div>
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
@@ -57,7 +57,7 @@
                 <div
                   class="not-italic font-black text-center text-black text-[36px] sm:text-[5vw] lg:text-[65px] lg:leading-[79px] leading-[64px] ct-Playfair"
                 >
-                  20
+                  {{minutes%60}}
                 </div>
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
@@ -76,7 +76,7 @@
                 <div
                   class="not-italic font-black text-center text-black text-[36px] sm:text-[5vw] lg:text-[65px] lg:leading-[79px] leading-[64px] ct-Playfair"
                 >
-                  11
+                  {{seconds%60}}
                 </div>
                 <div
                   class="not-italic font-bold text-sm leading-5 flex items-center text-center text-black mx-auto"
@@ -114,6 +114,36 @@
     </div>
   </section>
 </template>
+
+<script>
+import {ref} from '@vue/reactivity'
+export default {
+  setup() {
+    const days = ref(0)
+    const hours = ref(0)
+    const minutes = ref(0)
+    const seconds = ref(0)
+    const lunarNewYear2023 = new Date('22 January 2023');
+
+    setInterval(() => {
+      const currDate = new Date();
+      const newYearTime = lunarNewYear2023 - currDate
+
+      seconds.value = parseInt(newYearTime / 1000)
+      minutes.value = parseInt(seconds.value / 60)
+      hours.value = parseInt(minutes.value / 60)
+      days.value = parseInt(hours.value / 24)
+    }, 1000)
+
+    return {
+      days,
+      hours,
+      minutes,
+      seconds
+    }
+  },
+}
+</script>
 
 <style>
 .hero {
